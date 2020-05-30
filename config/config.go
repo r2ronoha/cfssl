@@ -683,11 +683,11 @@ type AuthKey struct {
 // usage and a 1 year expiration time. The key usages chosen are
 // signing, key encipherment, client auth and server auth.
 func DefaultConfig() *SigningProfile {
-	d := helpers.OneYear
+	d := helpers.TwoYears
 	return &SigningProfile{
 		Usage:        []string{"signing", "key encipherment", "server auth", "client auth"},
 		Expiry:       d,
-		ExpiryString: "8760h",
+		ExpiryString: "17520h",
 	}
 }
 
